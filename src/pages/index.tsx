@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
   // credit: Lee Robinson https://github.com/leerob/leerob.io/blob/main/pages/api/github.ts
 
   const githubStats: { totalRepos: number; stars: number } = await fetch(
-    "https://api.github.com/users/nexxeln/repos?per_page=100"
+    "https://api.github.com/users/oasido/repos?per_page=100"
   ).then(async (response) => {
     const repos = (await response.json()) as Repository[];
 
@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async () => {
   });
 
   const pinnedRepos = await fetch(
-    "https://gh-pinned-repos.egoist.sh/?username=nexxeln"
+    "https://gh-pinned-repos.egoist.sh/?username=oasido"
   ).then(async (response) => {
     return await response.json();
   });
@@ -81,13 +81,11 @@ const HomePage: NextPage<{
         </h3>
 
         <p className="pb-6 pl-0.5 text-slate-200">
-          Apart from create-t3-app, I have{" "}
+          Below are some of the projects I&apos;ve made. In total, I have{" "}
           <span className="bold-text font-bold">{githubStats.totalRepos}</span>{" "}
-          public repositories which have earned me{" "}
-          <span className="bold-text font-bold">{githubStats.stars}</span>{" "}
-          stars! I have a bunch of other cool projects that you can see on my{" "}
+          public repositories. Check out other cool projects on my{" "}
           <a
-            href="https://github.com/nexxeln"
+            href="https://github.com/oasido"
             target="_blank"
             rel="noreferrer"
             className="text-t-purple opacity-90 transition-opacity duration-300 hover:opacity-100"

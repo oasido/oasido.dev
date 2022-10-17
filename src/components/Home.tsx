@@ -1,4 +1,5 @@
 import Image from "next/future/image";
+import oasido from "/public/oasido.png";
 import { FC } from "react";
 import { FiGithub, FiMail, FiStar } from "react-icons/fi";
 import { BiGitRepoForked } from "react-icons/bi";
@@ -66,8 +67,8 @@ const Hero = () => {
   return (
     <div className="flex h-screen flex-col items-center pt-32">
       <Image
-        src="/images/nexxel.webp"
-        alt="nexxel's avatar"
+        src={oasido}
+        alt="oasido's avatar"
         width={165}
         height={165}
         priority
@@ -75,12 +76,12 @@ const Hero = () => {
       />
 
       <h1 className="bold-text animate-gradient-text bg-gradient-to-r from-t-pink via-t-purple to-t-orange bg-clip-text pt-2 text-center text-5xl font-bold text-transparent">
-        nexxel
+        oasido
       </h1>
 
       <p className="pt-1 text-center text-xl">
-        Hi, I&apos;m Shoubhit. I&apos;m a 17 y/o self-taught developer and I
-        like to build cool stuff
+        Hi, I&apos;m Ofek. I&apos;m a 24 y/o self-taught developer and I like to
+        build cool stuff.
       </p>
 
       <div className="flex items-center pt-4 text-xl">
