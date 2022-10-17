@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { FC, ReactNode, useEffect, useState } from "react";
 import { FiArrowUp } from "react-icons/fi";
+import Footer from "./Footer";
 
 import Navbar from "./Navbar";
 
@@ -56,7 +57,7 @@ const Wrapper: FC<{
         <meta content={description} name="description" />
         <meta
           property="og:url"
-          content={`https://nexxel.dev${router.asPath}`}
+          content={`https://oasido.dev${router.asPath}`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Shoubhit Dash" />

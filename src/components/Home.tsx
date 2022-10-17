@@ -86,7 +86,7 @@ const Hero = () => {
 
       <div className="flex items-center pt-4 text-xl">
         <a
-          href="https://github.com/nexxeln/"
+          href="https://github.com/oasido/"
           title="GitHub"
           target="_blank"
           rel="noreferrer"
@@ -95,7 +95,7 @@ const Hero = () => {
           <FiGithub />
         </a>
         <a
-          href="mailto:shoubhit2005@gmail.com"
+          href="mailto:asido.ofek@gmail.com"
           title="Email"
           target="_blank"
           rel="noreferrer"
