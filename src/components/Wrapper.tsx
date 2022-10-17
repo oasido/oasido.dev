@@ -71,7 +71,7 @@ const Wrapper: FC<{
         <meta name="twitter:image" content={image} />
       </Head>
 
-      <div className="mx-4 h-screen items-center md:mx-auto md:flex md:w-4/5 md:flex-col lg:w-2/5">
+      <div className="mx-4 h-screen items-center p-2 md:mx-auto md:flex md:max-w-[700px] md:flex-col">
         <div className="pt-10" />
         <div className="px-2 md:px-5">
           <Navbar />
