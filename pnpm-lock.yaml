@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@next-auth/prisma-adapter': ^1.0.3
   '@next/bundle-analyzer': ^12.3.1
-  '@prisma/client': ^4.3.1
+  '@prisma/client': ^4.4.0
   '@tailwindcss/aspect-ratio': ^0.4.2
   '@tailwindcss/line-clamp': ^0.4.0
   '@tailwindcss/typography': ^0.5.4
@@ -32,7 +32,7 @@ specifiers:
   postcss: ^8.4.14
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
-  prisma: ^4.3.1
+  prisma: ^4.4.0
   prismjs: ^1.28.0
   random-word-slugs: ^0.1.6
   react: 18.2.0
@@ -53,8 +53,8 @@ specifiers:
   zod: ^3.17.3
 
 dependencies:
-  '@next-auth/prisma-adapter': 1.0.3_bwhncj256yar2zz55r2fl3abo4
-  '@prisma/client': 4.3.1_prisma@4.3.1
+  '@next-auth/prisma-adapter': 1.0.3_kapgdjynksezfxof2u7fjv3gqe
+  '@prisma/client': 4.4.0_prisma@4.4.0
   '@tanstack/react-query': 4.7.1_biqbaboplfbrettd7655fr4n2y
   '@trpc/client': 10.0.0-proxy-beta.2_igwqil3kejdm7wdrjsuyactfdq
   '@trpc/next': 10.0.0-proxy-beta.2_yeg3iz75h3alizv3x4jiiwylli
@@ -62,13 +62,13 @@ dependencies:
   '@trpc/server': 10.0.0-proxy-beta.2
   '@vercel/og': 0.0.17
   clsx: 1.2.1
-  contentlayer: 0.2.6
+  contentlayer: 0.2.6_date-fns@2.29.1
   date-fns: 2.29.1
   debounce: 1.2.1
   framer-motion: 7.5.0_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.10.3_biqbaboplfbrettd7655fr4n2y
-  next-contentlayer: 0.2.6_azq6kxkn3od7qdylwkyksrwopy
+  next-contentlayer: 0.2.6_ul3tfaw57mbihfzmserwh6ittq
   random-word-slugs: 0.1.6
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -99,10 +99,10 @@ devDependencies:
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
-  prisma: 4.3.1
+  prisma: 4.4.0
   prismjs: 1.28.0
   refractor: 4.7.0
-  tailwindcss: 3.1.6
+  tailwindcss: 3.1.6_postcss@8.4.14
   typescript: 4.7.4
   unist-util-visit: 4.1.0
 
@@ -122,32 +122,35 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.9
 
-  /@contentlayer/cli/0.2.6:
+  /@contentlayer/cli/0.2.6_date-fns@2.29.1:
     resolution: {integrity: sha512-+vml9srC+Y3pwi6vqDcqYSX7A2it6vwV5WZVe3hQfjx/TAGgA5sYwPHjbjdMiMWyqaI0keA3AQIkO03yAH97xw==}
     dependencies:
-      '@contentlayer/core': 0.2.6
+      '@contentlayer/core': 0.2.6_date-fns@2.29.1
       '@contentlayer/utils': 0.2.6
       clipanion: 3.2.0-rc.11
       typanion: 3.9.0
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - date-fns
       - markdown-wasm
       - supports-color
     dev: false
 
-  /@contentlayer/client/0.2.6:
+  /@contentlayer/client/0.2.6_date-fns@2.29.1:
     resolution: {integrity: sha512-ONzIi18+gHzXqins8s+RpEa6AIBnBPXK5jb//q8v97ZF5DeVwjwj/Ci18/qNzfjBamhVb5ZdxaWjXhY/YNWPVQ==}
     dependencies:
-      '@contentlayer/core': 0.2.6
+      '@contentlayer/core': 0.2.6_date-fns@2.29.1
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - date-fns
       - markdown-wasm
       - supports-color
     dev: false
 
-  /@contentlayer/core/0.2.6:
+  /@contentlayer/core/0.2.6_date-fns@2.29.1:
     resolution: {integrity: sha512-HStutEpmVdRCBZPa/KgnuZYoLCyP2hT+C8KVMGUlehU35Y4FsgyaCHyiCY8LB2Ezr3rv2tSbwUug3SWj9RNgYg==}
     peerDependencies:
+      date-fns: 2.x
       markdown-wasm: 1.x
     peerDependenciesMeta:
       date-fns:
@@ -176,13 +179,15 @@ packages:
       - supports-color
     dev: false
 
-  /@contentlayer/source-files/0.2.6:
+  /@contentlayer/source-files/0.2.6_date-fns@2.29.1:
     resolution: {integrity: sha512-reTqrBJi2aclzF6OuMyxvQfz25J4T7ho9YWFoVIdPKvUoFcTWiUi9YA/IfxmV2h0NI4MfEfWqLiIy4BQASgK8g==}
+    peerDependencies:
+      date-fns: 2.x
     peerDependenciesMeta:
       date-fns:
         optional: true
     dependencies:
-      '@contentlayer/core': 0.2.6
+      '@contentlayer/core': 0.2.6_date-fns@2.29.1
       '@contentlayer/utils': 0.2.6
       chokidar: 3.5.3
       date-fns: 2.29.1
@@ -467,13 +472,13 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@next-auth/prisma-adapter/1.0.3_bwhncj256yar2zz55r2fl3abo4:
+  /@next-auth/prisma-adapter/1.0.3_kapgdjynksezfxof2u7fjv3gqe:
     resolution: {integrity: sha512-3Lq1cD3ytKM3EGKJZ4UZvlqshLtlPvYxLeCrUV9ifYwYlq51kmDaHjsIawlp8EbH5pE1UhlsvtlXMery7RghtA==}
     peerDependencies:
       '@prisma/client': '>=2.26.0 || >=3'
       next-auth: ^4.0.1
     dependencies:
-      '@prisma/client': 4.3.1_prisma@4.3.1
+      '@prisma/client': 4.4.0_prisma@4.4.0
       next-auth: 4.10.3_biqbaboplfbrettd7655fr4n2y
     dev: false
 
@@ -753,8 +758,8 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@prisma/client/4.3.1_prisma@4.3.1:
-    resolution: {integrity: sha512-FA0/d1VMJNWqzU7WVWTNWJ+lGOLR9JUBnF73GdIPAEVo/6dWk4gHx0EmgeU+SMv4MZoxgOeTBJF2azhg7x0hMw==}
+  /@prisma/client/4.4.0_prisma@4.4.0:
+    resolution: {integrity: sha512-ciKOP246x1xwr04G9ajHlJ4pkmtu9Q6esVyqVBO0QJihaKQIUvbPjClp17IsRJyxqNpFm4ScbOc/s9DUzKHINQ==}
     engines: {node: '>=14.17'}
     requiresBuild: true
     peerDependencies:
@@ -763,16 +768,16 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b
-      prisma: 4.3.1
+      '@prisma/engines-version': 4.4.0-66.f352a33b70356f46311da8b00d83386dd9f145d6
+      prisma: 4.4.0
     dev: false
 
-  /@prisma/engines-version/4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b:
-    resolution: {integrity: sha512-8yWpXkQRmiSfsi2Wb/ZS5D3RFbeu/btL9Pm/gdF4phB0Lo5KGsDFMxFMgaD64mwED2nHc8ZaEJg/+4Jymb9Znw==}
+  /@prisma/engines-version/4.4.0-66.f352a33b70356f46311da8b00d83386dd9f145d6:
+    resolution: {integrity: sha512-P5v/PuEIJLYXZUZBvOLPqoyCW+m6StNqHdiR6te++gYVODpPdLakks5HVx3JaZIY+LwR02juJWFlwpc9Eog/ug==}
     dev: false
 
-  /@prisma/engines/4.3.1:
-    resolution: {integrity: sha512-4JF/uMaEDAPdcdZNOrnzE3BvrbGpjgV0FcPT3EVoi6I86fWkloqqxBt+KcK/+fIRR0Pxj66uGR9wVH8U1Y13JA==}
+  /@prisma/engines/4.4.0:
+    resolution: {integrity: sha512-Fpykccxlt9MHrAs/QpPGpI2nOiRxuLA+LiApgA59ibbf24YICZIMWd3SI2YD+q0IAIso0jCGiHhirAIbxK3RyQ==}
     requiresBuild: true
 
   /@protobufjs/aspromise/1.1.2:
@@ -847,7 +852,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.1.6
+      tailwindcss: 3.1.6_postcss@8.4.14
     dev: true
 
   /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.1.6:
@@ -855,7 +860,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.1.6
+      tailwindcss: 3.1.6_postcss@8.4.14
     dev: true
 
   /@tailwindcss/typography/0.5.4_tailwindcss@3.1.6:
@@ -866,7 +871,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.1.6
+      tailwindcss: 3.1.6_postcss@8.4.14
     dev: true
 
   /@tanstack/query-core/4.7.1:
@@ -1437,19 +1442,20 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
-  /contentlayer/0.2.6:
+  /contentlayer/0.2.6_date-fns@2.29.1:
     resolution: {integrity: sha512-nBvUipLxD5HLG++17/Tluz7In42VLiRTZCpRkLa2zsOVmu9v5t2AsiOTERRete+k4P7uaqbRs+mSI3zy/OHLiw==}
     engines: {node: '>=14.18'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@contentlayer/cli': 0.2.6
-      '@contentlayer/client': 0.2.6
-      '@contentlayer/core': 0.2.6
-      '@contentlayer/source-files': 0.2.6
+      '@contentlayer/cli': 0.2.6_date-fns@2.29.1
+      '@contentlayer/client': 0.2.6_date-fns@2.29.1
+      '@contentlayer/core': 0.2.6_date-fns@2.29.1
+      '@contentlayer/source-files': 0.2.6_date-fns@2.29.1
       '@contentlayer/utils': 0.2.6
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - date-fns
       - markdown-wasm
       - supports-color
     dev: false
@@ -3583,14 +3589,14 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next-contentlayer/0.2.6_azq6kxkn3od7qdylwkyksrwopy:
+  /next-contentlayer/0.2.6_ul3tfaw57mbihfzmserwh6ittq:
     resolution: {integrity: sha512-4k1mkW7P0vpvJ/XngJH23ZJAupKrhIS44y8eoGRQF8mEX+G+IhLlI7T95BsxB8U6I8JYOA2L6m8yxol4P6CCLQ==}
     peerDependencies:
       next: ^12
       react: '*'
       react-dom: '*'
     dependencies:
-      '@contentlayer/core': 0.2.6
+      '@contentlayer/core': 0.2.6_date-fns@2.29.1
       '@contentlayer/utils': 0.2.6
       next: 12.3.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -3598,6 +3604,7 @@ packages:
       rxjs: 7.5.6
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - date-fns
       - markdown-wasm
       - supports-color
     dev: false
@@ -3997,13 +4004,13 @@ packages:
     resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
     dev: false
 
-  /prisma/4.3.1:
-    resolution: {integrity: sha512-90xo06wtqil76Xsi3mNpc4Js3SdDRR5g4qb9h+4VWY4Y8iImJY6xc3PX+C9xxTSt1lr0Q89A0MLkJjd8ax6KiQ==}
+  /prisma/4.4.0:
+    resolution: {integrity: sha512-l/QKLmLcKJQFuc+X02LyICo0NWTUVaNNZ00jKJBqwDyhwMAhboD1FWwYV50rkH4Wls0RviAJSFzkC2ZrfawpfA==}
     engines: {node: '>=14.17'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@prisma/engines': 4.3.1
+      '@prisma/engines': 4.4.0
 
   /prismjs/1.28.0:
     resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
@@ -4545,10 +4552,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /tailwindcss/3.1.6:
+  /tailwindcss/3.1.6_postcss@8.4.14:
     resolution: {integrity: sha512-7skAOY56erZAFQssT1xkpk+kWt2NrO45kORlxFPXUt3CiGsVPhH1smuH5XoDH6sGPXLyBv+zgCKA2HWBsgCytg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
