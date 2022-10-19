@@ -36,12 +36,9 @@ const PostCard = (post: Post) => {
 
 const Blog = ({ posts }: { posts: Post[] }) => {
   return (
-    <Wrapper
-      title="nexxel • blog"
-      description="Writings on programming and tech"
-    >
-      <h1 className="bold-text pt-14 text-3xl font-bold text-t-purple">Blog</h1>
-      <p className="pt-1 text-slate-200">
+    <Wrapper title="oasido • blog" description="Web development blog">
+      <h1 className="pt-14 text-3xl font-bold text-t-purple">Blog</h1>
+      <p className="pt-1 text-lg text-slate-200">
         Here I write about programming and tech I like. You can expect writings
         on new tech I explore and web development.
       </p>

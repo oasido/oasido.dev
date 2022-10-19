@@ -72,18 +72,18 @@ const HomePage: NextPage<{
   latestPosts: Post[];
 }> = ({ githubStats, pinnedRepos, latestPosts }) => {
   return (
-    <Wrapper title="nexxel" description="17 yo self-taught developer">
+    <Wrapper title="oasido" description="a nice guy that likes to code">
       <Hero />
 
       <div className="flex flex-col items-center justify-center">
-        <h3 className="bold-text self-start pb-2 text-4xl font-bold">
+        <h3 className="self-start pb-2 text-4xl font-bold">
           Things I&apos;ve built
         </h3>
 
         <p className="pb-6 pl-0.5 text-slate-200">
           Below are some of the projects I&apos;ve made. In total, I have{" "}
-          <span className="bold-text font-bold">{githubStats.totalRepos}</span>{" "}
-          public repositories. Check out other cool projects on my{" "}
+          <span className="font-bold">{githubStats.totalRepos}</span> public
+          repositories. Check out other cool projects on my{" "}
           <a
             href="https://github.com/oasido"
             target="_blank"
@@ -130,7 +130,7 @@ const HomePage: NextPage<{
 
       <div className="pt-32" />
       <div className="flex flex-col">
-        <h3 className="bold-text pb-6 text-4xl font-bold">From the blog</h3>
+        <h3 className="pb-6 text-4xl font-bold">From the blog</h3>
 
         <div className="flex flex-col gap-1">
           {latestPosts.map((post, index) => (

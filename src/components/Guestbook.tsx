@@ -22,7 +22,7 @@ const Signature: FC<{ name: string; message: string }> = ({
   return (
     <div className="flex flex-col">
       <p className="text-sm md:text-xl">{message}</p>
-      <p className="text-t-pink sm:text-sm md:text-base">- {name}</p>
+      <p className="text-t-pink sm:text-sm md:text-base">{name}</p>
     </div>
   );
 };
@@ -30,12 +30,12 @@ const Signature: FC<{ name: string; message: string }> = ({
 const LogOutButton = () => {
   return (
     <button
-      className="mt-2 cursor-pointer rounded-md border-2 border-t-purple border-opacity-80 px-3 py-2 text-sm transition-colors duration-300 hover:bg-t-purple hover:bg-opacity-30 hover:text-white"
+      className="mt-2 cursor-pointer rounded-md border-2 border-t-red border-opacity-80 px-3 py-2 text-sm transition-colors duration-300 hover:bg-t-red hover:bg-opacity-30 hover:text-white"
       onClick={() => {
         signOut();
       }}
     >
-      Log Out
+      Logout
     </button>
   );
 };
@@ -83,7 +83,6 @@ const Guestbook = () => {
 
     setMessage("");
     setLoading(false);
-    console.log("refetched");
   };
 
   if (status === "loading") {
@@ -103,7 +102,7 @@ const Guestbook = () => {
               style={{ borderRadius: "50%" }}
             />
 
-            <p>- Signed in as {session.user.name}</p>
+            <p>{session.user.name}</p>
           </div>
         )}
 
@@ -115,7 +114,7 @@ const Guestbook = () => {
           name="message"
           id="message"
           value={message}
-          placeholder="Your message..."
+          placeholder="Say something nice..."
           className="mt-1 w-full rounded-md border-2 border-t-pink border-opacity-80 bg-zinc-800 px-4 py-2 text-xl text-slate-200 focus:border-opacity-100 focus:outline-none"
           onChange={(e) => setMessage(e.target.value)}
         />
@@ -128,7 +127,7 @@ const Guestbook = () => {
               className="mt-2 cursor-pointer rounded-md border-2 border-t-purple border-opacity-80 px-3 py-2 text-sm transition-colors duration-300 hover:bg-t-purple hover:bg-opacity-30 hover:text-white disabled:opacity-80"
               onClick={() => handleSubmit()}
             >
-              Sign
+              Post
             </button>
 
             <LogOutButton />
@@ -167,8 +166,7 @@ const Guestbook = () => {
           Log In
         </button>
         <p className="w-2/3 pt-1.5 text-sm text-slate-300">
-          Log in with Discord to comment. Your information is only used to
-          display your name to avoid impersonation.
+          If you wish to write something, please log in with your Discord.
         </p>
       </div>
 

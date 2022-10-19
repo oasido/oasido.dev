@@ -91,9 +91,7 @@ const NowPlaying = () => {
           />
 
           <div className="flex flex-col gap-y-2">
-            <p className="medium-text font-medium sm:text-lg md:text-xl">
-              {spotify.song}
-            </p>
+            <p className="font-medium sm:text-lg md:text-xl">{spotify.song}</p>
             <p className="sm:text-sm md:text-lg">
               {spotify.artist.replaceAll(";", ",")}
             </p>
@@ -117,9 +115,7 @@ const NowPlayingPage = () => {
       title="nexxel • now playing"
       description="Currently playing song on Spotify"
     >
-      <h1 className="bold-text pt-14 text-3xl font-bold text-t-purple">
-        Now Playing
-      </h1>
+      <h1 className="pt-14 text-3xl font-bold text-t-purple">Now Playing</h1>
       <p className="pt-1 text-slate-200">
         Currently playing song on Spotify. It is read from my Discord presence
         using{" "}
@@ -127,7 +123,7 @@ const NowPlayingPage = () => {
           href="https://github.com/Phineas/lanyard"
           target="_blank"
           rel="noreferrer"
-          className="medium-text font-medium text-t-pink transition-opacity duration-300 hover:opacity-90"
+          className="font-medium text-t-pink transition-opacity duration-300 hover:opacity-90"
         >
           Lanyard
         </a>

@@ -1,4 +1,6 @@
-<h1 align="center">nexxel.dev</h1>
+<h1 align="center">oasido.dev</h1>
+
+##### This project has been forked from [nexxel](https://github.com/nexxeln/nexxel.dev), highly urge you to check him out.
 
 ## Stack
 

@@ -24,16 +24,14 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const linkStyles =
-  "font-medium medium-text text-t-pink hover:opacity-90 transition-opacity duration-300";
+  "font-medium text-t-pink hover:opacity-90 transition-opacity duration-300";
 
-const boldStyles = "font-medium medium-text";
+const boldStyles = "font-medium";
 
 const AboutPage: NextPage<{ topTrack: Track }> = ({ topTrack }) => {
   return (
-    <Wrapper title="nexxel • about" description="Learn more about me">
-      <h1 className="bold-text pt-14 text-3xl font-bold text-t-purple">
-        About Me
-      </h1>
+    <Wrapper title="oasido • about" description="Learn more about me">
+      <h1 className="pt-14 text-3xl font-bold text-t-purple">About Me</h1>
 
       <div className="pt-6" />
 

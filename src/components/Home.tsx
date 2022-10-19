@@ -25,10 +25,10 @@ const ProjectCard: FC<{
             duration: 0.2,
           },
         }}
-        className="flex h-40 transform flex-col place-content-evenly rounded-lg border-2 border-t-pink bg-[#1c1c1c] p-4"
+        className="flex h-44 transform flex-col place-content-evenly rounded-lg border-2 border-t-pink bg-[#1c1c1c] p-4"
       >
         <div className="flex flex-col gap-1">
-          <p className="medium-text text-xl font-medium">{repo}</p>
+          <p className="text-xl font-medium">{repo}</p>
           <p className="text-sm">{description}</p>
         </div>
 
@@ -55,7 +55,7 @@ const FeaturedPost = (post: Post) => {
   return (
     <Link href={post.url}>
       <a className="flex rounded-lg px-4 py-4 transition-colors duration-200 hover:bg-zinc-800">
-        <p className="medium-text text-xl font-medium text-t-pink line-clamp-1">
+        <p className="text-xl font-medium text-t-pink line-clamp-1">
           {post.title}
         </p>
       </a>
@@ -75,7 +75,7 @@ const Hero = () => {
         className="pixelated rounded-full"
       />
 
-      <h1 className="bold-text animate-gradient-text bg-gradient-to-r from-t-pink via-t-purple to-t-orange bg-clip-text pt-2 text-center text-5xl font-bold text-transparent">
+      <h1 className="animate-gradient-text bg-gradient-to-r from-t-pink via-t-purple to-t-orange bg-clip-text pt-2 text-center text-5xl font-bold text-transparent">
         oasido
       </h1>
 

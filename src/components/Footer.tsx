@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <p className="px-4 pt-24 pb-6 md:text-base">
-        This website is open source on{" "}
+        This website was forked{" "}
         <a
           href="https://github.com/nexxeln/nexxel.dev"
           target="_blank"

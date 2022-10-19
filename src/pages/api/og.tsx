@@ -7,12 +7,12 @@ export const config = {
 };
 
 const handler = async (req: NextApiRequest, _res: NextApiResponse) => {
-  const GTWalsheim = await fetch(
-    "https://www.nexxel.dev/fonts/GTWalsheimBold.woff"
+  const Inter = await fetch(
+    "https://www.oasido.dev/fonts/inter-v12-latin-regular.woff"
   ).then(async (res) => res.arrayBuffer());
 
   const JetBrainsMono = await fetch(
-    "https://www.nexxel.dev/fonts/JetBrainsMonoRegular.ttf"
+    "https://www.oasido.dev/fonts/JetBrainsMonoRegular.ttf"
   ).then((res) => res.arrayBuffer());
 
   const { searchParams } = new URL(req.url!);
@@ -22,15 +22,16 @@ const handler = async (req: NextApiRequest, _res: NextApiResponse) => {
   const lg = {
     fontSize: "72px",
     lineHeight: "80px",
-    fontWeight: 800,
-    fontFamily: "GT Walsheim Bold",
+    fontWeight: 700,
+    fontFamily: "Inter",
     color: "#cabdff",
   };
+
   const md = {
     fontSize: "62px",
     lineHeight: "70px",
-    fontWeight: 900,
-    fontFamily: "GT Walsheim Bold",
+    fontWeight: 500,
+    fontFamily: "Inter",
     color: "#cabdff",
   };
 
@@ -86,11 +87,11 @@ const handler = async (req: NextApiRequest, _res: NextApiResponse) => {
                 color: "#c4c4c4",
               }}
             >
-              nexxel.dev
+              oasido.dev
             </p>
             <img
-              src="https://www.nexxel.dev/_next/image?url=%2Fimages%2Fnexxel.webp&w=256&q=75"
-              alt="nexxel's avatar"
+              src="https://www.oasido.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Foasido.708e642b.png&w=256&q=75"
+              alt="oasido's avatar"
               width={70}
               height={70}
               style={{
@@ -104,8 +105,8 @@ const handler = async (req: NextApiRequest, _res: NextApiResponse) => {
     {
       fonts: [
         {
-          name: "GT Walsheim Bold",
-          data: GTWalsheim,
+          name: "Inter",
+          data: Inter,
           weight: 700,
           style: "normal",
         },

@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/GTWalsheimBold.woff2",
+      "source": "/inter-v12-latin-regular.woff2",
       "headers": [
         {
           "key": "Cache-Control",
@@ -10,7 +10,16 @@
       ]
     },
     {
-      "source": "/GTWalsheimRegular.woff2",
+      "source": "/inter-v12-latin-regular.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/inter-v12-latin-regular.woff2",
       "headers": [
         {
           "key": "Cache-Control",

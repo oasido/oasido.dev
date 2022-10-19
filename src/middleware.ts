@@ -4,7 +4,7 @@ export async function middleware(req: NextRequest) {
   const { pathname, origin } = req.nextUrl;
 
   if (pathname === "/gh" || pathname === "/github") {
-    return NextResponse.redirect("https://github.com/nexxeln");
+    return NextResponse.redirect("https://github.com/oasido");
   }
   const slug = pathname.split("/r/").pop();
 

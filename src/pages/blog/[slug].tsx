@@ -44,7 +44,7 @@ const PostLayout = ({ post, draft }: { post: Post; draft: boolean }) => {
   const formattedDate = format(parseISO(post.date), "LLLL d, yyyy");
   const readingTimeText = readingTime(post.body.code).text;
 
-  const imageLink = `https://www.nexxel.dev/api/og/?title=${post.title}&top=${formattedDate} • ${readingTimeText}`;
+  const imageLink = `https://www.oasido.dev/api/og/?title=${post.title}&top=${formattedDate} • ${readingTimeText}`;
 
   return (
     <Wrapper
@@ -62,7 +62,7 @@ const PostLayout = ({ post, draft }: { post: Post; draft: boolean }) => {
             <p>please don&apos;t share this link thank you</p>
           </div>
         )}
-        <h1 className="bold-text text-4xl font-bold">{post.title}</h1>
+        <h1 className="text-4xl font-bold">{post.title}</h1>
         <div className="pt-4">
           <div className="flex items-center gap-2">
             <FiEdit2 />

@@ -19,12 +19,10 @@ const images = [
 const GuestbookPage = () => {
   return (
     <Wrapper
-      title="nexxel • gallery"
+      title="oasido • gallery"
       description="Some cool picutres I've taken"
     >
-      <h1 className="bold-text pt-14 text-3xl font-bold text-t-purple">
-        Gallery
-      </h1>
+      <h1 className="pt-14 text-3xl font-bold text-t-purple">Gallery</h1>
       <p className="pt-1 text-slate-200">
         These are some cool pictures I have taken. Most of them are from cycling
         trips or my balcony.
