@@ -8,17 +8,17 @@ const NavItem: FC<{ href: string; text: string; router: NextRouter }> = ({
   text,
   router,
 }) => {
-  const isActive = router.pathname === (href === "/home" ? "/" : href);
+  const isActive = router.pathname.replace(/[^\/]+/g, "") === href;
 
   return (
-    <Link href={href === "/home" ? "/" : href}>
+    <Link href={href}>
       <a
-        className={clsx(
-          "text-md mr-4 md:mr-6 md:text-lg",
-          isActive
-            ? "medium-text font-medium text-t-pink"
-            : "transition-colors duration-300 hover:text-t-pink"
-        )}
+        className={`text-md mr-4 md:mr-6 md:text-lg
+          ${
+            isActive
+              ? "font-bold text-t-pink"
+              : "transition-colors duration-300 hover:text-t-pink"
+          }`}
       >
         {text}
       </a>
@@ -28,17 +28,18 @@ const NavItem: FC<{ href: string; text: string; router: NextRouter }> = ({
 
 const Navbar = () => {
   const router = useRouter();
-  const links = ["home", "blog", "guestbook", "FAQ", "more"];
+  const menuItems = [
+    { label: "Home", link: "/" },
+    { label: "Blog", link: "blog" },
+    { label: "Guestbook", link: "guestbook" },
+    { label: "FAQ", link: "faq" },
+    { label: "More", link: "more" },
+  ];
 
   return (
-    <nav className="mx-auto flex max-w-sm items-center justify-between capitalize">
-      {links.map((link, index) => (
-        <NavItem
-          href={`/${link === "FAQ" ? "faq" : link}`}
-          text={link}
-          router={router}
-          key={index}
-        />
+    <nav className="flex items-center justify-between max-w-sm mx-auto">
+      {menuItems.map((item, idx) => (
+        <NavItem href={item.link} text={item.label} router={router} key={idx} />
       ))}
     </nav>
   );
